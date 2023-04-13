@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class OrganizationDAOImpl implements OrganizationDAO {
+public class OrganizationDAOImpl implements OrganizationDAO{
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -30,7 +30,7 @@ public class OrganizationDAOImpl implements OrganizationDAO {
     @Override
     public List<Organization> getAll() {
         Session session = sessionFactory.getCurrentSession();
-        List<Organization> allOrganizations = session.createQuery("from Organization ", Organization.class).getResultList();
+        @SuppressWarnings("SyntaxError") List<Organization> allOrganizations = session.createQuery("from Organization", Organization.class).getResultList();
         return allOrganizations;
     }
 
