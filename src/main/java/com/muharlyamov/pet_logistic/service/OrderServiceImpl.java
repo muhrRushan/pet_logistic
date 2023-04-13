@@ -34,6 +34,7 @@ public class OrderServiceImpl implements OrderService {
         return orderDAO.getAll();
     }
 
+    @Transactional
     @Override
     public List<Order> getAllByFilter(OrdersFilter filter) {
         return orderDAO.getAllByFilter(filter);

@@ -37,7 +37,6 @@ public class OrganizationDAOImpl implements OrganizationDAO{
     @Override
     public Organization getOrganization(int id) {
         Session session = sessionFactory.getCurrentSession();
-        Organization organization = session.get(Organization.class, id);
-        return organization;
+        return session.get(Organization.class, id);
     }
 }

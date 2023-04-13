@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "clients")
+@Table(name = "client")
 public class Client {
 
     @Id
@@ -14,7 +14,7 @@ public class Client {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "view")
+    @Column(name = "name")
     @NotNull
     private String view;
 

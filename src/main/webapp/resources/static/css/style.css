@@ -112,10 +112,8 @@ body {
 }
 
 .content-base{
-    display: flex;
-    flex-direction: column;
-    width: 99%;
-    margin-right: 310px;
+    width: 100%;
+    margin-right: 240px;
     margin-left: 130px;
     margin-top: 15px;
 }
@@ -332,14 +330,13 @@ body {
 
 .content-orders-base-filters {
     display: flex;
-    /*width: 18%;*/
+    width: 200px;
     margin-left: 10px;
     flex-direction: column;
     position: fixed;
-    top: 28px;
+    top: 38px;
     right: 10px;
     color: black;
-    
 }
 
 .orders-filter-form {
@@ -350,7 +347,7 @@ body {
 
 }
 
-.orders-filter-form input{
+.orders-filter-form input,select{
     height: 25px;
     text-align: center;
     font-size: medium;
@@ -361,8 +358,7 @@ body {
 
 .period{
     display: flex;
-    flex-direction: row;
-    justify-content: stretch;
+    flex-direction: column;
     flex-wrap: nowrap;
 }
 
@@ -374,6 +370,10 @@ body {
 }
 
 .orders-filter-single input{
+    width: 100%;
+}
+
+.orders-filter-single select{
     width: 100%;
 }
 
@@ -393,12 +393,37 @@ body {
     background-color: rgba(30, 27, 221, 0.175);
     border-radius: 10px;
     padding: 10px;
-    height: 40px;
+    height: 20px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #filter-button:hover {
     background-color: rgba(30, 27, 221, 0.522);
+    color: #f3f3f3;
+}
+
+.orders-status-new {
+    background-color: bisque;
+}
+
+.orders-status-readyToDelivery {
+    background-color: aquamarine;
+}
+
+.orders-status-deliveryInProgress {
+    background-color: blue;
+    color: #f3f3f3;
+}
+
+.orders-status-delivered {
+    background-color: green;
+    color: #f3f3f3;
 }

@@ -2,9 +2,7 @@ package com.muharlyamov.pet_logistic.controller.filters;
 
 import org.springframework.stereotype.Component;
 
-import java.security.PublicKey;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.time.chrono.ChronoLocalDateTime;
 import java.util.HashMap;
 
 @Component
@@ -15,6 +13,7 @@ public class OrdersFilter {
     private String organizationViewPart;
     private String clientViewPart;
     private String carViewPart;
+    private String statusViewPart;
 
     public OrdersFilter() {
     }
@@ -59,8 +58,23 @@ public class OrdersFilter {
         this.carViewPart = carViewPart;
     }
 
+    public String getStatusViewPart() {
+        return statusViewPart;
+    }
+
+    public void setStatusViewPart(String statusViewPart) {
+        this.statusViewPart = statusViewPart;
+    }
+
     public HashMap<String, Object> getFlledFilters(){
         HashMap<String, Object> result = new HashMap<>();
+
+        if (!this.getShipmentDateBegin().equals(null)) {result.put("shipmentDateBegin", this.getShipmentDateBegin());}
+        if (!this.getShipmentDateEnd().equals(null)) {result.put("ShipmentDateBeginEnd", this.getShipmentDateEnd());}
+        if (!this.getOrganizationViewPart().equals(null)) {result.put("organizationViewPart", this.getOrganizationViewPart());}
+        if (!this.getClientViewPart().equals(null)) {result.put("clientViewPart", this.getClientViewPart());}
+        if (!this.getCarViewPart().equals(null)) {result.put("carViewPart", this.getCarViewPart());}
+        if (!this.getStatusViewPart().equals(null)) {result.put("statusViewPart", this.getStatusViewPart());}
 
         return result;
     }

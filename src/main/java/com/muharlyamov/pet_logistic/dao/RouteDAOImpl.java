@@ -53,7 +53,6 @@ public class RouteDAOImpl implements RouteDAO {
     @Override
     public Route getRoute(int id) {
         Session session = sessionFactory.getCurrentSession();
-        Route route = session.get(Route.class, id);
-        return route;
+        return session.get(Route.class, id);
     }
 }

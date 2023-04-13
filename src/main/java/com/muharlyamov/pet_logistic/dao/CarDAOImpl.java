@@ -24,8 +24,7 @@ public class CarDAOImpl implements CarDAO {
     @Override
     public Car getCar(int id) {
         Session session = sessionFactory.getCurrentSession();
-        Car car = session.get(Car.class, id);
-        return  car;
+        return session.get(Car.class, id);
     }
 
     @Override

@@ -37,7 +37,6 @@ public class DriverDAOImpl implements DriverDAO {
     @Override
     public Driver getDriver(int id) {
         Session session = sessionFactory.getCurrentSession();
-        Driver driver = session.get(Driver.class, id);
-        return driver;
+        return session.get(Driver.class, id);
     }
 }

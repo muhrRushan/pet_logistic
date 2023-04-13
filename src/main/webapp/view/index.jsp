@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!doctype html>
@@ -9,8 +9,10 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Главная</title>
         <link href="<c:url value="/resources/static/css/style.css"/>" rel="stylesheet"/>
+        <script src="<c:url value="/resources/static/js/orders.js"/>"></script>
     </head>
     <body>
         <div class="home-categories-box">
@@ -79,13 +81,28 @@
                         <tbody>
                             <c:forEach var="order" items="${orders}">
                                 <tr>
-                                    <td>${order.status}</td>
+                                    <td
+                                    <c:choose>
+                                        <c:when test="${order.isStatusEqual('DELIVERED')}">
+                                            class="orders-status-delivered"
+                                        </c:when>
+                                        <c:when test="${order.isStatusEqual('READY_TO_DELIVERY')}">
+                                            class="orders-status-readyToDelivery"
+                                        </c:when>
+                                        <c:when test="${order.isStatusEqual('DELIVERY_IN_PROGRESS')}">
+                                            class="orders-status-deliveryInProgress"
+                                        </c:when>
+                                        <c:otherwise>
+                                            class="orders-status-new"
+                                        </c:otherwise>
+                                    </c:choose>
+                                    >${order.status}</td>
                                     <td>${order.number}</td>
-                                    <td>${order.date}</td>
-                                    <td>${order.shipment_date}</td>
-                                    <td>${order.organization}</td>
-                                    <td>${order.client}</td>
-                                    <td>${order.route.car}</td>
+                                    <td>${order.date_formatted()}</td>
+                                    <td>${order.shipment_date_formatted()}</td>
+                                    <td>${order.organization.view}</td>
+                                    <td>${order.client.view}</td>
+                                    <td>${order.route.car.view}</td>
                                     <td>${order.route.driver}</td>
                                 </tr>
                             </c:forEach>
@@ -93,49 +110,58 @@
                     </table>
                 </div>
             </div>
-            <div class="content-orders-base-filters">
-                <h2 class="orders-headers">Отбор</h2>
-                <form:form method="post" class="orders-filter-form" modelAttribute="filter" action="/orders">
-                    <div class="orders-filter-form-item">
-                        <b>Дата отгрузки</b>
+        </div>
+        <div class="content-orders-base-filters">
+            <h2 class="orders-headers">Отбор</h2>
+            <form:form id='ordersFilter' method="post" class="orders-filter-form" modelAttribute="filter" action="/orders">
+                <div class="orders-filter-form-item">
+                    <b>Дата отгрузки (период)</b>
+                    <br>
+                    <br>
+                    <label class="period" >
+                        <form:input onchange="ordersFilterOnChange()" type="datetime-local" path="shipmentDateBegin"/>
                         <br>
-                        <br>
-                        <label class="period">
-                            <form:input type="date" path="shipmentDateBegin"/>
-                            <span> - </span>
-                            <form:input type="date" path="shipmentDateEnd"/>
-                        </label>
-                    </div>
-                    <div class="orders-filter-form-item">
-                        <b>Организация (содержит) </b>
-                        <br>
-                        <br>
-                        <label class="orders-filter-single">
-                            <form:input type="text" path="organizationViewPart"/>
-                        </label>
-                    </div>
+                        <form:input onchange="ordersFilterOnChange()" type="datetime-local" path="shipmentDateEnd"/>
+                    </label>
+                </div>
+                <div class="orders-filter-form-item">
+                    <b>Организация (содержит) </b>
+                    <br>
+                    <br>
+                    <label class="orders-filter-single">
+                        <form:input onchange="ordersFilterOnChange()" type="text" path="organizationViewPart"/>
+                    </label>
+                </div>
 
-                    <div class="orders-filter-form-item">
-                        <b>Клиент (содержит) </b>
-                        <br>
-                        <br>
-                        <label class="orders-filter-single">
-                            <form:input type="text" path="clientViewPart"/>
-                        </label>
-                    </div>
+                <div class="orders-filter-form-item">
+                    <b>Клиент (содержит) </b>
+                    <br>
+                    <br>
+                    <label class="orders-filter-single">
+                        <form:input onchange="ordersFilterOnChange()" type="text" path="clientViewPart"/>
+                    </label>
+                </div>
 
-                    <div class="orders-filter-form-item">
-                        <b>Автомобиль (содержит) </b>
-                        <br>
-                        <br>
-                        <label class="orders-filter-single">
-                            <form:input type="text" path="carViewPart"/>
-                        </label>
-                    </div>
+                <div class="orders-filter-form-item">
+                    <b>Автомобиль (содержит) </b>
+                    <br>
+                    <br>
+                    <label class="orders-filter-single">
+                        <form:input onchange="ordersFilterOnChange()" type="text" path="carViewPart"/>
+                    </label>
+                </div>
 
-                    <input id="filter-button" type="submit" value="Применить"/>
-                </form:form>
-            </div>
+                <div class="orders-filter-form-item">
+                    <b>Статус (содержит) </b>
+                    <br>
+                    <br>
+                    <label class="orders-filter-single">
+                        <form:select onchange="ordersFilterOnChange()" path="statusViewPart" items="${statusList}"/>
+                    </label>
+                </div>
+                <a id="filter-button" href="/clearFilters">Сбросить</a>
+<%--                <input id="filter-button" type="submit" value="Применить"/>--%>
+            </form:form>
         </div>
     </body>
 </html>

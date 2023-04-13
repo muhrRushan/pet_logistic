@@ -1,9 +1,11 @@
 package com.muharlyamov.pet_logistic.entity;
 
+import com.muharlyamov.pet_logistic.entity.enums.OrderStatus;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 @Entity
@@ -94,8 +96,20 @@ public class Order{
         return shipment_date;
     }
 
+    public String shipment_date_formatted() {
+        return shipment_date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm"));
+    }
+
+    public String date_formatted() {
+        return date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm"));
+    }
+
     public void setShipment_date(LocalDateTime shipment_date) {
         this.shipment_date = shipment_date;
+    }
+
+    public boolean isStatusEqual(String status) {
+        return OrderStatus.getStatusByRussianView(this.status).toString().equals(status);
     }
 
     public Route getRoute() {

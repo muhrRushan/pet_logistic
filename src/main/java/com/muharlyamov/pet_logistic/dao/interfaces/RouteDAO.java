@@ -8,10 +8,10 @@ import javax.print.attribute.standard.OrientationRequested;
 import java.util.List;
 
 public interface RouteDAO {
-    public void save(Route route);
-    public void delete(Route route);
-    public void addOrderToRoute(Route route, Order order);
-    public void removeOrderFromRoute(Order order);
-    public List<Route> getAll();
-    public Route getRoute(int id);
+    void save(Route route);
+    void delete(Route route);
+    void addOrderToRoute(Route route, Order order);
+    void removeOrderFromRoute(Order order);
+    List<Route> getAll();
+    Route getRoute(int id);
 }

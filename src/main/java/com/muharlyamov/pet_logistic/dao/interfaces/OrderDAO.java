@@ -7,11 +7,11 @@ import com.muharlyamov.pet_logistic.entity.Order;
 import java.util.List;
 
 public interface OrderDAO {
-    public void save(Order order);
-    public void delete(Order order);
-    public List<Order> getAll();
+    void save(Order order);
+    void delete(Order order);
+    List<Order> getAll();
 
-    public List<Order> getAllByFilter(OrdersFilter filter);
+    List<Order> getAllByFilter(OrdersFilter filter);
 
-    public Order getOrder(int id);
+    Order getOrder(int id);
 }
