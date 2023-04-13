@@ -1,5 +1,6 @@
 package com.muharlyamov.pet_logistic.service;
 
+import com.muharlyamov.pet_logistic.controller.filters.OrdersFilter;
 import com.muharlyamov.pet_logistic.dao.interfaces.OrderDAO;
 import com.muharlyamov.pet_logistic.entity.Order;
 import com.muharlyamov.pet_logistic.service.interfaces.OrderService;
@@ -31,6 +32,11 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> getAll() {
         return orderDAO.getAll();
+    }
+
+    @Override
+    public List<Order> getAllByFilter(OrdersFilter filter) {
+        return orderDAO.getAllByFilter(filter);
     }
 
     @Transactional

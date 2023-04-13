@@ -30,7 +30,7 @@ public class ClientDAOImpl implements ClientDAO {
     @Override
     public List<Client> getAllClients() {
         Session session = sessionFactory.getCurrentSession();
-        List<Client> allClients = session.createQuery("from Client", Client.class).getResultList();;
+        @SuppressWarnings("SyntaxError") List<Client> allClients = session.createQuery("from Client", Client.class).getResultList();
         return allClients;
     }
 

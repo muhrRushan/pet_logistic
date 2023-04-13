@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!doctype html>
 <html lang="en">
@@ -76,361 +77,33 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
-                            <tr>
-                                <td>К доставке</td>
-                                <td>НЗ-89399</td>
-                                <td>1.04.2023</td>
-                                <td>17.04.2023</td>
-                                <td>ООО "Рога и Копыта"</td>
-                                <td>ООО "Пятерочка"</td>
-                                <td>К892СК116 (Hyinday Solaris)</td>
-                                <td>Егоров А.Ю.</td>
-                            </tr>
+                            <c:forEach var="order" items="${orders}">
+                                <tr>
+                                    <td>${order.status}</td>
+                                    <td>${order.number}</td>
+                                    <td>${order.date}</td>
+                                    <td>${order.shipment_date}</td>
+                                    <td>${order.organization}</td>
+                                    <td>${order.client}</td>
+                                    <td>${order.route.car}</td>
+                                    <td>${order.route.driver}</td>
+                                </tr>
+                            </c:forEach>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="content-orders-base-filters">
                 <h2 class="orders-headers">Отбор</h2>
-                <form method="post" class="orders-filter-form">
+                <form:form method="post" class="orders-filter-form" modelAttribute="filter" action="/orders">
                     <div class="orders-filter-form-item">
                         <b>Дата отгрузки</b>
                         <br>
                         <br>
                         <label class="period">
-                            <input type="date" name="shipmentDateStart" />
+                            <form:input type="date" path="shipmentDateBegin"/>
                             <span> - </span>
-                            <input type="date" name="shipmentDateEnd"/>
+                            <form:input type="date" path="shipmentDateEnd"/>
                         </label>
                     </div>
                     <div class="orders-filter-form-item">
@@ -438,7 +111,7 @@
                         <br>
                         <br>
                         <label class="orders-filter-single">
-                            <input type="text" name="organization"/>
+                            <form:input type="text" path="organizationViewPart"/>
                         </label>
                     </div>
 
@@ -447,7 +120,7 @@
                         <br>
                         <br>
                         <label class="orders-filter-single">
-                            <input type="text" name="client"/>
+                            <form:input type="text" path="clientViewPart"/>
                         </label>
                     </div>
 
@@ -456,12 +129,12 @@
                         <br>
                         <br>
                         <label class="orders-filter-single">
-                            <input type="text" name="car"/>
+                            <form:input type="text" path="carViewPart"/>
                         </label>
                     </div>
 
                     <input id="filter-button" type="submit" value="Применить"/>
-                </form>
+                </form:form>
             </div>
         </div>
     </body>

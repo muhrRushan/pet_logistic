@@ -33,7 +33,7 @@ public class Route {
 
     @OneToOne
     @JoinColumn(name = "driver_id")
-    private Driver drivers;
+    private Driver driver;
 
     @OneToMany
     @JoinColumn(name = "route_id")
@@ -47,7 +47,7 @@ public class Route {
         this.number = number;
         this.date = date;
         this.car = car;
-        this.drivers = drivers;
+        this.driver = drivers;
     }
 
     public int getId() {
@@ -91,11 +91,11 @@ public class Route {
     }
 
     public Driver getDrivers() {
-        return drivers;
+        return driver;
     }
 
-    public void setDrivers(Driver drivers) {
-        this.drivers = drivers;
+    public void setDrivers(Driver driver) {
+        this.driver = driver;
     }
 
     public List<Order> getOrders() {
@@ -107,12 +107,12 @@ public class Route {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Route route = (Route) o;
-        return id == route.id && Objects.equals(view, route.view) && Objects.equals(number, route.number) && Objects.equals(date, route.date) && Objects.equals(car, route.car) && Objects.equals(drivers, route.drivers);
+        return id == route.id && Objects.equals(view, route.view) && Objects.equals(number, route.number) && Objects.equals(date, route.date) && Objects.equals(car, route.car) && Objects.equals(driver, route.driver);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, view, number, date, car, drivers);
+        return Objects.hash(id, view, number, date, car, driver);
     }
 
     @Override
@@ -123,7 +123,7 @@ public class Route {
                 ", number='" + number + '\'' +
                 ", date=" + date +
                 ", car=" + car +
-                ", drivers=" + drivers +
+                ", drivers=" + driver +
                 '}';
     }
 }

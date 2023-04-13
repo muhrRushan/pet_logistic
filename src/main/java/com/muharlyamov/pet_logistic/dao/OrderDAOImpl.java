@@ -1,12 +1,16 @@
 package com.muharlyamov.pet_logistic.dao;
 
+import com.muharlyamov.pet_logistic.controller.filters.OrdersFilter;
 import com.muharlyamov.pet_logistic.dao.interfaces.OrderDAO;
 import com.muharlyamov.pet_logistic.entity.Order;
+import com.sun.tools.javac.comp.Todo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Repository
@@ -30,7 +34,17 @@ public class OrderDAOImpl implements OrderDAO {
     @Override
     public List<Order> getAll() {
         Session session = sessionFactory.getCurrentSession();
-        List<Order> allOrders = session.createQuery("from Order", Order.class).getResultList();
+        @SuppressWarnings("SyntaxError") List<Order> allOrders = session.createQuery("from Order", Order.class).getResultList();
+        return allOrders;
+    }
+
+    // TODO
+    @Override
+    public List<Order> getAllByFilter(OrdersFilter filter) {
+        Session session = sessionFactory.getCurrentSession();
+        HashMap<String, Object> filledFilters = filter.getFlledFilters();
+        @SuppressWarnings("SyntaxError") List<Order> allOrders = session.createQuery("from Order", Order.class).getResultList();
+
         return allOrders;
     }
 

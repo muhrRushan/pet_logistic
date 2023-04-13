@@ -30,7 +30,7 @@ public class DriverDAOImpl implements DriverDAO {
     @Override
     public List<Driver> getAll() {
         Session session = sessionFactory.getCurrentSession();
-        List<Driver> allDrivers = session.createQuery("from Driver", Driver.class).getResultList();
+        @SuppressWarnings("SyntaxError") List<Driver> allDrivers = session.createQuery("from Driver", Driver.class).getResultList();
         return allDrivers;
     }
 

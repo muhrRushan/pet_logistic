@@ -34,10 +34,11 @@ public class CarDAOImpl implements CarDAO {
         session.delete(car);
     }
 
+    @SuppressWarnings("SyntaxError")
     @Override
     public List<Car> getAllCars() {
         Session session = sessionFactory.getCurrentSession();
-        List<Car> allCars = session.createQuery("from Car", Car.class).getResultList();
+        @SuppressWarnings("SyntaxError") List<Car> allCars = session.createQuery("from Car", Car.class).getResultList();
         return allCars;
     }
 }

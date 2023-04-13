@@ -46,7 +46,7 @@ public class RouteDAOImpl implements RouteDAO {
     @Override
     public List<Route> getAll() {
         Session session = sessionFactory.getCurrentSession();
-        List<Route> allRoutes = session.createQuery("from Route ", Route.class).getResultList();
+        @SuppressWarnings("SyntaxError") List<Route> allRoutes = session.createQuery("from Route ", Route.class).getResultList();
         return allRoutes;
     }
 
