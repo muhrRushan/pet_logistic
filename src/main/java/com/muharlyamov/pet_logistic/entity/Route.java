@@ -35,10 +35,6 @@ public class Route {
     @JoinColumn(name = "driver_id")
     private Driver driver;
 
-    @OneToMany
-    @JoinColumn(name = "route_id")
-    private List<Order> orders;
-
     public Route() {
     }
 
@@ -90,16 +86,12 @@ public class Route {
         this.car = car;
     }
 
-    public Driver getDrivers() {
+    public Driver getDriver() {
         return driver;
     }
 
-    public void setDrivers(Driver driver) {
+    public void setDriver(Driver driver) {
         this.driver = driver;
-    }
-
-    public List<Order> getOrders() {
-        return orders;
     }
 
     @Override

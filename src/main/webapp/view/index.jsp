@@ -20,22 +20,22 @@
                 PET<br>
                 LOGISTIC
             </div>
-            <div class="home-categories-box-item home-categories-box-item-selected">
+            <a href="/orders" class="home-categories-box-item home-categories-box-item-selected">
                 <div class="home-categories-box-item-header">
                     <div class="categories-logos-parent">
-                        <img class="categories-logos" src="<c:url value="/resources/static/img/orders.png"/>"/>
+                       <img class="categories-logos" src="<c:url value="/resources/static/img/orders.png"/>"/>
                     </div>
                     <h2>Заказы</h2>
                 </div>
-            </div>
-            <div class="home-categories-box-item">
+            </a>
+            <a href="/routes" class="home-categories-box-item">
                 <div class="home-categories-box-item-header">
                     <div class="categories-logos-parent">
                         <img class="categories-logos" src="<c:url value="/resources/static/img/routes.png"/>"/>
                     </div>
                     <h2>Маршруты</h2>
                 </div>
-            </div>
+            </a>
             <div class="home-categories-box-item">
                 <div class="home-categories-box-item-header">
                     <div class="categories-logos-parent">
@@ -103,7 +103,7 @@
                                     <td>${order.organization.view}</td>
                                     <td>${order.client.view}</td>
                                     <td>${order.route.car.view}</td>
-                                    <td>${order.route.driver}</td>
+                                    <td>${order.route.driver.view}</td>
                                 </tr>
                             </c:forEach>
                         </tbody>

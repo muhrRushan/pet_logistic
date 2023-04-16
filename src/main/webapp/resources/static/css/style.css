@@ -200,6 +200,7 @@ body {
     margin: 0px;
     color:aliceblue;
     align-items: center;
+    text-decoration: none;
 }
 
 .home-categories-box-item-selected {
@@ -216,11 +217,15 @@ body {
     color: aliceblue;
     margin-left: 5px;
     margin-right: 5px;
+    text-decoration: none;
+}
 
+h2{
+    text-decoration: none;
 }
 
 .categories-logos {
-    width: 30px;
+    width: 35px;
     margin: 5px;
 }
 

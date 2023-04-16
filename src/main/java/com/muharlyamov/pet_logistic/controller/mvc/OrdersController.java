@@ -1,4 +1,4 @@
-package com.muharlyamov.pet_logistic.controller;
+package com.muharlyamov.pet_logistic.controller.mvc;
 
 import com.muharlyamov.pet_logistic.controller.filters.OrdersFilter;
 import com.muharlyamov.pet_logistic.entity.Order;
